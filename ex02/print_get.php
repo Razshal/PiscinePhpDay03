@@ -1,12 +1,6 @@
 <?php
-
-$vars = $_SERVER['QUERY_STRING'];
-$vars = explode("&", $vars);
-foreach ($vars as $var)
+foreach ($_GET as $vars => $var)
 {
-    if ($var) {
-        $temp = explode("=", $var);
-        echo("{$temp[0]}: {$temp[1]}\n");
-    }
+    echo ("{$vars}: {$var}\n");
 }
 ?>
